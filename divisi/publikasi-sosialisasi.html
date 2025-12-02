@@ -3,12 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publikasi dan Sosialisasi - GenBI UIN Suska Riau</title>
+
+    <title>GenBI Komisariat UIN Suska Riau - Energi untuk Negeri</title>
+
+    <!-- Deskripsi SEO -->
+    <meta name="description" 
+          content="Website resmi GenBI Komisariat UIN Suska Riau. Informasi kegiatan, divisi, galeri, dan program beasiswa Bank Indonesia untuk generasi muda. Energi untuk Negeri.">
+
+    <!-- Keyword SEO -->
+    <meta name="keywords" 
+          content="GenBI UIN Suska Riau, GenBI Riau, GenBI Komisariat, Beasiswa Bank Indonesia, GenBI Komsat UIN Suska, Energi untuk Negeri, Organisasi GenBI Riau">
+
+    <!-- Canonical (supaya Google anggap URL asli utamanya) -->
+    <link rel="canonical" href="https://genbi-uinsuska.vercel.app">
+
+    <!-- Open Graph untuk WA, Facebook, Line -->
+    <meta property="og:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta property="og:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri dengan karya, kontribusi, dan gerakan nyata.">
+    <meta property="og:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+    <meta property="og:url" content="https://genbi-uinsuska.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GenBI UIN Suska Riau">
+
+    <!-- Twitter Cards (boleh tanpa akun) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta name="twitter:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
+    <meta name="twitter:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+
+    <!-- Schema.org JSON-LD untuk SEO Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GenBI Komisariat UIN Suska Riau",
+      "url": "https://genbi-uinsuska.vercel.app",
+      "logo": "https://genbi-uinsuska.vercel.app/asset/img/Logo.png",
+      "sameAs": [
+        "https://www.instagram.com/genbi_uinsuska",
+        "https://www.youtube.com"
+      ],
+      "description": "Website profil resmi GenBI Komisariat UIN Suska Riau. Organisasi penerima beasiswa Bank Indonesia dengan semangat Energi untuk Negeri."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../asset/img/favicon.png" type="image/png">
+
+    <!-- Fonts & CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="../asset/img/favicon.png" type="image/png">
 
+    <!-- Tailwind Custom -->
     <script>
         tailwind.config = {
             theme: {
@@ -18,46 +65,33 @@
                     },
                     colors: {
                         genbi: {
-                            blue: '#0044cc', 
-                            dark: '#002a80', 
+                            blue: '#0044cc',
+                            dark: '#002a80',
                             red: '#ff0000',
                             redhover: '#cc0000'
                         }
                     },
-                    animation: {
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
 
+    <!-- Animasi -->
     <style>
-        /* Custom CSS untuk Animasi Scroll */
         .reveal-element {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-
         .reveal-element.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Delay bertingkat untuk grid anggota */
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
         .delay-400 { transition-delay: 400ms; }
         .delay-500 { transition-delay: 500ms; }
-        .delay-600 { transition-delay: 600ms; }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-700 bg-gray-50">
@@ -256,10 +290,9 @@
                         "Energi untuk Negeri". Komunitas penerima beasiswa Bank Indonesia yang berdedikasi tinggi untuk kemajuan pendidikan dan sosial di Provinsi Riau.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/genbi_uinsuska/" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@genbiriau-generasibaruindo3216" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/Genbiriau_" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
@@ -283,25 +316,33 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-genbi-red"></i>
-                            <span class="hover:text-white cursor-pointer transition">genbi.uinsuska@email.com</span>
-                        </li>
-                         <li class="flex items-center gap-3">
-                            <i class="fas fa-phone text-genbi-red"></i>
-                            <span class="hover:text-white cursor-pointer transition">+62 812-3456-7890</span>
+                            <span class="hover:text-white cursor-pointer transition">uinsuskagenbi@gmail.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="bg-black py-6 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                <p>&copy; 2025 GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
-                <p>Designed with <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> for Indonesia</p>
-            </div>
-        </div>
+<div class="bg-black py-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
+
+        <p class="flex items-center gap-1">
+            Designed with 
+            <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> 
+            for Indonesia • by 
+            <a href="https://www.linkedin.com/in/daniharmade/" 
+               target="_blank" 
+               class="text-blue-400 hover:underline">
+               Dani Harmade
+            </a>
+        </p>
+    </div>
+</div>
     </footer>
 
     <script>
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
         // Toggle Mobile Menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
