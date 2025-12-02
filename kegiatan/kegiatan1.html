@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kegiatan - GenBI UIN Suska Riau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        genbi: {
+                            blue: '#0044cc', 
+                            dark: '#002a80', 
+                            red: '#ff0000',
+                            redhover: '#cc0000'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-700 bg-gray-50">
+
+    <!-- NAVBAR (Link kembali ke index.html) -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Section -->
+                <a href="../index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <div class="h-12 w-12 flex items-center justify-center">
+                        <img src="../asset/img/Logo.png" alt="Logo GenBI" class="w-full h-full object-contain">
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-genbi-blue leading-none">GenBI</h1>
+                        <p class="text-[10px] font-bold text-genbi-red tracking-widest uppercase mt-0.5">Komsat UIN Suska Riau</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../index.html#beranda" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Beranda</a>
+                    <a href="../index.html#sambutan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Sambutan</a>
+                    <a href="../index.html#tentang" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Tentang Kami</a>
+                    <a href="../index.html#divisi" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Divisi</a>
+                    <a href="../index.html#kegiatan" class="text-genbi-blue font-bold transition text-sm lg:text-base">Kegiatan</a>
+                    <a href="../index.html#kontak" class="px-5 py-2.5 bg-genbi-red text-white rounded-full font-medium hover:bg-genbi-redhover transition shadow-lg shadow-red-500/30 text-sm lg:text-base">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-genbi-blue focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="../index.html#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="../index.html#sambutan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Sambutan</a>
+                <a href="../index.html#tentang" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Tentang Kami</a>
+                <a href="../index.html#divisi" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Divisi</a>
+                <a href="../index.html#kegiatan" class="block px-3 py-2 text-base font-medium text-genbi-blue font-bold bg-blue-50 rounded-md">Kegiatan</a>
+                <a href="../index.html#kontak" class="block mt-4 text-center px-5 py-3 bg-genbi-red text-white rounded-lg font-medium hover:bg-genbi-redhover">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KONTEN KEGIATAN -->
+    <main class="pt-28 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumb -->
+            <div class="flex items-center text-sm text-gray-500 mb-6">
+                <a href="../index.html" class="hover:text-genbi-blue">Beranda</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#kegiatan" class="hover:text-genbi-blue">Kegiatan</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900 font-medium">Detail</span>
+            </div>
+
+            <!-- Header Artikel -->
+            <div class="mb-8">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-genbi-blue text-xs font-bold uppercase tracking-wider mb-4">
+                    Pendidikan
+                </span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    GenBI Mengajar: Membangun Mimpi Anak Negeri di Desa Binaan
+                </h1>
+                
+                <!-- Meta Info -->
+                <div class="flex items-center text-gray-500 text-sm border-b border-gray-100 pb-6">
+                    <div class="flex items-center mr-6">
+                        <i class="far fa-calendar-alt mr-2 text-genbi-red"></i>
+                        <span>12 Oktober 2024</span>
+                    </div>
+                    <div class="flex items-center mr-6">
+                        <i class="far fa-user mr-2 text-genbi-red"></i>
+                        <span>Admin GenBI</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="far fa-folder mr-2 text-genbi-red"></i>
+                        <span>Divisi Pendidikan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO LANDSCAPE BESAR -->
+            <div class="w-full h-[300px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl mb-10 relative">
+                <!-- Ganti src dengan foto kegiatan asli -->
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" 
+                     alt="Foto Kegiatan GenBI Mengajar" 
+                     class="w-full h-full object-cover">
+                
+                <!-- Caption Foto (Opsional) -->
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <p class="text-white text-sm italic">Dokumentasi kegiatan mengajar di SDN 005 Desa Binaan.</p>
+                </div>
+            </div>
+
+            <!-- ISI ARTIKEL -->
+            <article class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed space-y-6">
+                <p class="font-medium text-xl text-gray-900">
+                    Pekanbaru – Generasi Baru Indonesia (GenBI) Komisariat UIN Sultan Syarif Kasim Riau kembali menggelar kegiatan sosial bertajuk "GenBI Mengajar". Kegiatan ini dilaksanakan sebagai wujud nyata pengabdian mahasiswa penerima beasiswa Bank Indonesia terhadap dunia pendidikan, khususnya di daerah pinggiran.
+                </p>
+
+                <p>
+                    Kegiatan yang berlangsung pada hari Sabtu lalu ini melibatkan lebih dari 30 anggota aktif GenBI. Mereka terbagi menjadi beberapa kelompok untuk memberikan materi pelajaran yang bervariasi, mulai dari Matematika dasar, Bahasa Inggris yang menyenangkan, hingga pengenalan Literasi Keuangan sejak dini.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 pt-4">Antusiasme Anak-Anak Desa</h3>
+                
+                <p>
+                    Suasana ceria tampak menyelimuti wajah anak-anak Desa Binaan saat kakak-kakak GenBI mulai masuk ke kelas. Metode pembelajaran yang diterapkan pun tidak kaku; diselingi dengan <em>games</em> edukatif dan pembagian hadiah menarik bagi yang berani menjawab pertanyaan. Hal ini dilakukan untuk menumbuhkan rasa percaya diri dan semangat belajar mereka.
+                </p>
+                
+                <p>
+                    "Kami sangat senang kakak-kakak GenBI datang kesini. Belajarnya seru, tidak membosankan, dan kami jadi tahu cara menabung yang benar," ujar Riko, salah satu siswa kelas 5 SD yang mengikuti kegiatan tersebut.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 pt-4">Edukasi Cinta Rupiah & QRIS</h3>
+
+                <p>
+                    Selain mata pelajaran umum, Divisi Pendidikan GenBI UIN Suska juga menyisipkan materi wajib mengenai <strong>Cinta, Bangga, Paham Rupiah</strong>. Anak-anak diajarkan cara merawat uang kertas agar tidak lusuh dan mengenali keaslian uang rupiah. Tak lupa, pengenalan sistem pembayaran digital QRIS juga disampaikan secara sederhana agar mereka mengenal perkembangan teknologi keuangan.
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-genbi-blue p-6 my-8 rounded-r-lg">
+                    <p class="italic text-genbi-blue font-semibold">
+                        "Harapan kami, kegiatan kecil ini bisa memantik semangat adik-adik untuk terus bermimpi setinggi langit. Karena pendidikan adalah kunci utama untuk memutus mata rantai kemiskinan dan memajukan bangsa."
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">– Ketua Pelaksana GenBI Mengajar</p>
+                </div>
+
+                <p>
+                    Kegiatan ditutup dengan penyerahan donasi buku bacaan untuk perpustakaan desa serta foto bersama. Semangat pengabdian ini diharapkan terus menyala dalam setiap langkah GenBI UIN Suska Riau sebagai energi baru untuk negeri.
+                </p>
+            </article>
+
+            <!-- Share Button -->
+            <div class="border-t border-gray-100 mt-12 pt-8">
+                <h4 class="text-gray-900 font-bold mb-4">Bagikan Kegiatan Ini:</h4>
+                <div class="flex gap-3">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </button>
+                    <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition flex items-center gap-2">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </button>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigasi Berita Lain -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Kegiatan Lainnya</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="#" class="group flex gap-4 items-center">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue transition line-clamp-2">Sosialisasi QRIS Goes to Campus UIN Suska</h4>
+                            <span class="text-xs text-gray-500">10 Oktober 2024</span>
+                        </div>
+                    </a>
+                    <a href="#" class="group flex gap-4 items-center">
+                        <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue transition line-clamp-2">Aksi Bersih Lingkungan & Tanam Pohon</h4>
+                            <span class="text-xs text-gray-500">05 Oktober 2024</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12 md:gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center p-1">
+                             <img src="../asset/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                             <span class="text-xl font-bold text-white block">GenBI UIN Suska</span>
+                             <span class="text-xs text-gray-400">Komisariat UIN Suska Riau</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+                        "Energi untuk Negeri". Komunitas penerima beasiswa Bank Indonesia yang berdedikasi tinggi untuk kemajuan pendidikan dan sosial di Provinsi Riau.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="../index.html#beranda" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Beranda</a></li>
+                        <li><a href="../index.html#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Sambutan</a></li>
+                        <li><a href="../index.html#tentang" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Tentang Kami</a></li>
+                        <li><a href="../index.html#divisi" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Struktur Organisasi</a></li>
+                        <li><a href="../index.html#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Berita & Galeri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-genbi-red"></i>
+                            <span>UIN Sultan Syarif Kasim Riau,<br>Jl. HR. Soebrantas No. 155, Pekanbaru, Riau.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-genbi-red"></i>
+                            <span class="hover:text-white cursor-pointer transition">genbi.uinsuska@email.com</span>
+                        </li>
+                         <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-genbi-red"></i>
+                            <span class="hover:text-white cursor-pointer transition">+62 812-3456-7890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black py-6 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2024 GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart text-red-500 mx-1"></i> for Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
