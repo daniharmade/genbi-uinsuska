@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GenBI Komisariat UIN Suska Riau - Energi untuk Negeri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="asset/img/favicon.png" type="image/png">
 
-    <!-- Open Graph (untuk WhatsApp, Facebook, Instagram, Line, dsb.) -->
+    <title>GenBI Komisariat UIN Suska Riau - Energi untuk Negeri</title>
+
+    <!-- Deskripsi SEO -->
+    <meta name="description" 
+          content="Website resmi GenBI Komisariat UIN Suska Riau. Informasi kegiatan, divisi, galeri, dan program beasiswa Bank Indonesia untuk generasi muda. Energi untuk Negeri.">
+
+    <!-- Keyword SEO -->
+    <meta name="keywords" 
+          content="GenBI UIN Suska Riau, GenBI Riau, GenBI Komisariat, Beasiswa Bank Indonesia, GenBI Komsat UIN Suska, Energi untuk Negeri, Organisasi GenBI Riau">
+
+    <!-- Canonical (supaya Google anggap URL asli utamanya) -->
+    <link rel="canonical" href="https://genbi-uinsuska.vercel.app">
+
+    <!-- Open Graph untuk WA, Facebook, Line -->
     <meta property="og:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
     <meta property="og:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri dengan karya, kontribusi, dan gerakan nyata.">
     <meta property="og:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
@@ -17,9 +25,37 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GenBI UIN Suska Riau">
 
-    <!-- Untuk WhatsApp agar preview muncul lebih kuat -->
-    <meta name="description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
+    <!-- Twitter Cards (boleh tanpa akun) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta name="twitter:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
+    <meta name="twitter:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
 
+    <!-- Schema.org JSON-LD untuk SEO Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GenBI Komisariat UIN Suska Riau",
+      "url": "https://genbi-uinsuska.vercel.app",
+      "logo": "https://genbi-uinsuska.vercel.app/asset/img/Logo.png",
+      "sameAs": [
+        "https://www.instagram.com/genbi_uinsuska",
+        "https://www.youtube.com"
+      ],
+      "description": "Website profil resmi GenBI Komisariat UIN Suska Riau. Organisasi penerima beasiswa Bank Indonesia dengan semangat Energi untuk Negeri."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="asset/img/favicon.png" type="image/png">
+
+    <!-- Fonts & CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind Custom -->
     <script>
         tailwind.config = {
             theme: {
@@ -29,40 +65,28 @@
                     },
                     colors: {
                         genbi: {
-                            blue: '#0044cc', 
-                            dark: '#002a80', 
+                            blue: '#0044cc',
+                            dark: '#002a80',
                             red: '#ff0000',
                             redhover: '#cc0000'
                         }
                     },
-                    animation: {
-                        'float': 'float 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
+
+    <!-- Animasi -->
     <style>
-        /* Custom CSS untuk Animasi Scroll */
         .reveal-element {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-
         .reveal-element.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Delay bertingkat */
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
@@ -70,6 +94,7 @@
         .delay-500 { transition-delay: 500ms; }
     </style>
 </head>
+
 <body class="font-sans antialiased text-gray-700 bg-gray-50">
 
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
