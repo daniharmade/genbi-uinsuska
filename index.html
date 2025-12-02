@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,33 +23,49 @@
                             red: '#ff0000',
                             redhover: '#cc0000'
                         }
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        /* Animasi kustom untuk floating card */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        /* Custom CSS untuk Animasi Scroll */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
         }
+
+        /* Delay bertingkat */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-700 bg-gray-50">
 
-    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo Section -->
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <div class="h-12 w-12 flex items-center justify-center">
-                        <!-- Menggunakan path logo sesuai permintaan -->
+                <div class="flex-shrink-0 flex items-center gap-3 group cursor-pointer">
+                    <div class="h-12 w-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                         <img src="asset/img/Logo.png" alt="Logo GenBI" class="w-full h-full object-contain">
                     </div>
                     <div class="hidden sm:block">
@@ -58,29 +74,26 @@
                     </div>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#beranda" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Beranda</a>
-                    <a href="#sambutan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Sambutan</a>
-                    <a href="#tentang" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Tentang Kami</a>
-                    <a href="#divisi" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Divisi</a>
-                    <a href="#kegiatan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base">Kegiatan</a>
-                    <a href="#kontak" class="px-5 py-2.5 bg-genbi-red text-white rounded-full font-medium hover:bg-genbi-redhover transition shadow-lg shadow-red-500/30 text-sm lg:text-base">
+                    <a href="#beranda" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
+                    <a href="#sambutan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Sambutan</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Tentang Kami</a>
+                    <a href="#divisi" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Divisi</a>
+                    <a href="#kegiatan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Kegiatan</a>
+                    <a href="#kontak" class="px-5 py-2.5 bg-genbi-red text-white rounded-full font-medium hover:bg-genbi-redhover transition shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transform hover:-translate-y-0.5 text-sm lg:text-base">
                         Hubungi Kami
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-genbi-blue focus:outline-none p-2">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-genbi-blue focus:outline-none p-2 transition-transform active:scale-95">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg transform origin-top transition-all duration-300">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Beranda</a>
                 <a href="#sambutan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Sambutan</a>
@@ -94,34 +107,28 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
         
-        <!-- Background Ornaments -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-red-50/60 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-red-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full h-full">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center h-full">
                 
-                <!-- Text Content -->
                 <div class="space-y-6 text-center lg:text-left order-2 lg:order-1 flex flex-col justify-center">
-                    <!-- Badge -->
-                    <div class="flex justify-center lg:justify-start">
-                        <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-genbi-blue text-xs font-bold tracking-wide uppercase">
+                    <div class="flex justify-center lg:justify-start reveal-element">
+                        <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-genbi-blue text-xs font-bold tracking-wide uppercase hover:bg-blue-100 transition cursor-default">
                             <span class="w-2 h-2 bg-genbi-red rounded-full mr-2 animate-pulse"></span>
                             GenBI Komisariat UIN Suska Riau
                         </span>
                     </div>
 
-                    <!-- Main Headline -->
                     <div class="space-y-4">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15]">
+                        <h1 class="reveal-element delay-100 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15]">
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-genbi-blue to-cyan-500">#Energi Untuk Negeri.</span>
                         </h1>
                         
-                        <!-- SLOGAN -->
-                        <div class="flex items-center justify-center lg:justify-start gap-3 pt-2">
+                        <div class="reveal-element delay-200 flex items-center justify-center lg:justify-start gap-3 pt-2">
                             <div class="h-1 w-12 bg-genbi-red rounded-full"></div>
                             <h2 class="text-xl md:text-2xl font-bold italic text-genbi-red tracking-wide">
                                 "Menuju Tak Terbatas dan Melampauinya"
@@ -129,35 +136,30 @@
                         </div>
                     </div>
 
-                    <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    <p class="reveal-element delay-300 text-gray-600 text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
                         Wadah bagi penerima beasiswa Bank Indonesia di UIN Sultan Syarif Kasim Riau untuk mengembangkan potensi, kepemimpinan, dan berkontribusi nyata.
                     </p>
 
-                    <!-- Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#tentang" class="group px-8 py-3.5 bg-genbi-blue text-white rounded-lg font-semibold hover:bg-genbi-dark transition-all duration-300 shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
+                    <div class="reveal-element delay-400 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#tentang" class="group px-8 py-3.5 bg-genbi-blue text-white rounded-lg font-semibold hover:bg-genbi-dark transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 flex items-center justify-center gap-2 transform hover:-translate-y-1">
                             Kenali Kami
                             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#kegiatan" class="px-8 py-3.5 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-genbi-blue hover:text-genbi-blue transition-all duration-300 bg-white flex items-center justify-center">
+                        <a href="#kegiatan" class="px-8 py-3.5 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-genbi-blue hover:text-genbi-blue transition-all duration-300 bg-white flex items-center justify-center transform hover:-translate-y-1">
                             Lihat Galeri
                         </a>
                     </div>
                 </div>
 
-                <!-- Hero Image -->
-                <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end items-center">
-                    <!-- Decorative back gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-genbi-blue/20 to-genbi-red/20 opacity-30 rounded-[3rem] transform rotate-6 scale-90 blur-md -z-10"></div>
+                <div class="reveal-element delay-200 relative order-1 lg:order-2 flex justify-center lg:justify-end items-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-genbi-blue/20 to-genbi-red/20 opacity-30 rounded-[3rem] transform rotate-6 scale-90 blur-md -z-10 animate-pulse"></div>
                     
                     <div class="relative w-full max-w-md lg:max-w-full">
-                        <!-- Main Image -->
                         <img src="asset/img/FotoBersama.JPG" 
                              alt="Mahasiswa GenBI UIN Suska" 
-                             class="relative rounded-[2rem] shadow-2xl w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover object-center ring-4 ring-white">
+                             class="relative rounded-[2rem] shadow-2xl w-full h-[350px] md:h-[450px] lg:h-[500px] object-cover object-center ring-4 ring-white hover:scale-[1.02] transition duration-500">
                         
-                        <!-- Floating Info Card -->
-                        <div class="absolute -bottom-8 -left-8 bg-white p-5 rounded-xl shadow-xl hidden md:block animate-float border border-gray-100">
+                        <div class="absolute -bottom-8 -left-8 bg-white p-5 rounded-xl shadow-xl hidden md:block animate-float border border-gray-100 z-20">
                             <div class="flex items-center gap-4">
                                 <div class="bg-red-50 p-3 rounded-full text-genbi-red text-xl">
                                     <i class="fas fa-university"></i>
@@ -175,23 +177,22 @@
         </div>
     </section>
 
-    <!-- STATS BANNER -->
-    <section class="bg-genbi-blue py-12 relative z-10 -mt-2">
+    <section class="bg-genbi-blue py-12 relative z-10 -mt-2 reveal-element">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white divide-x divide-blue-400/30">
-                <div class="p-2">
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
                     <h3 class="text-4xl font-bold mb-1">50+</h3>
                     <p class="text-blue-200 text-sm font-medium">Anggota Aktif</p>
                 </div>
-                <div class="p-2">
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
                     <h3 class="text-4xl font-bold mb-1">5</h3>
                     <p class="text-blue-200 text-sm font-medium">Divisi Kerja</p>
                 </div>
-                <div class="p-2">
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
                     <h3 class="text-4xl font-bold mb-1">100+</h3>
                     <p class="text-blue-200 text-sm font-medium">Program Terlaksana</p>
                 </div>
-                <div class="p-2">
+                <div class="p-2 hover:transform hover:-translate-y-1 transition duration-300">
                     <h3 class="text-4xl font-bold mb-1">100%</h3>
                     <p class="text-blue-200 text-sm font-medium">Dedikasi</p>
                 </div>
@@ -199,51 +200,43 @@
         </div>
     </section>
 
-    <!-- SAMBUTAN KETUA SECTION (BARU) -->
     <section id="sambutan" class="py-20 bg-white overflow-hidden relative">
-        <!-- Decoration Dots -->
         <div class="absolute top-20 right-0 p-4 opacity-10">
             <div class="w-24 h-24 border-t-4 border-r-4 border-genbi-blue rounded-tr-3xl"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Foto Ketua -->
-                <div class="w-full lg:w-1/3 flex justify-center lg:justify-end relative order-1 lg:order-1">
+                <div class="w-full lg:w-1/3 flex justify-center lg:justify-end relative order-1 lg:order-1 reveal-element">
                     <div class="relative w-72 h-80 lg:w-80 lg:h-[450px]">
-                        <!-- Background Shape -->
-                        <div class="absolute top-4 left-4 w-full h-full bg-blue-100 rounded-3xl -z-10 transform rotate-3"></div>
+                        <div class="absolute top-4 left-4 w-full h-full bg-blue-100 rounded-3xl -z-10 transform rotate-3 transition duration-500 hover:rotate-6"></div>
                         <div class="absolute bottom-4 right-4 w-full h-full bg-genbi-blue rounded-3xl -z-20 transform -rotate-2 opacity-10"></div>
                         
-                        <!-- Image Container -->
                         <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative group">
-                            <!-- GANTI SRC INI DENGAN FOTO KETUA ASLI -->
                             <img src="asset/img/ketum.jpg" 
                                  alt="Ketua GenBI" 
                                  class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
 
-                        <!-- Name Tag Floating -->
-                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[90%] bg-white/95 backdrop-blur-sm p-4 shadow-lg rounded-xl z-20 border-l-4 border-genbi-red text-center">
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[90%] bg-white/95 backdrop-blur-sm p-4 shadow-lg rounded-xl z-20 border-l-4 border-genbi-red text-center hover:scale-105 transition duration-300">
                             <h4 class="text-lg font-bold text-gray-900 leading-tight">M. Haadziqul Haqq</h4>
                             <p class="text-xs text-genbi-blue font-bold uppercase tracking-wider mt-1">Ketua Umum GenBI UIN Suska Riau</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Teks Sambutan -->
                 <div class="w-full lg:w-2/3 lg:pl-8 order-2 lg:order-2">
-                    <div class="flex items-center gap-2 mb-4">
+                    <div class="flex items-center gap-2 mb-4 reveal-element delay-100">
                         <div class="h-1 w-10 bg-genbi-red"></div>
                         <span class="text-genbi-blue font-bold tracking-widest text-sm uppercase">Sambutan Ketua</span>
                     </div>
                     
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h2 class="reveal-element delay-200 text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                         Membangun Sinergi, <br>
                         Mewujudkan <span class="text-genbi-red italic">Prestasi.</span>
                     </h2>
                     
-                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
+                    <div class="reveal-element delay-300 space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
                         <p>
                             <span class="text-3xl font-serif text-genbi-blue float-left mr-2 leading-[0.8]">"</span>
                             Assalamu'alaikum Warahmatullahi Wabarakatuh.
@@ -256,13 +249,12 @@
                         </p>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+                    <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between reveal-element delay-400">
                         <div>
                              <p class="text-sm text-gray-400 italic">Wassalamu'alaikum Wr. Wb.</p>
                         </div>
-                        <!-- Placeholder Signature (Opsional) -->
                         <div class="opacity-40">
-                             <i class="fas fa-signature text-4xl"></i>
+                             <i class="fas fa-signature text-4xl transform -rotate-6"></i>
                         </div>
                     </div>
                 </div>
@@ -270,10 +262,9 @@
         </div>
     </section>
 
-    <!-- TENTANG KAMI -->
     <section id="tentang" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal-element">
                 <span class="text-genbi-red font-bold tracking-wider text-sm uppercase">Filosofi Kami</span>
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-4">Tentang <span class="text-genbi-blue">GenBI UIN Suska</span></h2>
                 <div class="h-1.5 w-24 bg-genbi-blue mx-auto rounded-full"></div>
@@ -283,32 +274,29 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
-                    <div class="w-16 h-16 bg-blue-100 text-genbi-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-blue group-hover:text-white transition">
+                <div class="reveal-element delay-100 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 text-genbi-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-blue group-hover:text-white transition duration-300 transform group-hover:rotate-6">
                         <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Front Liners</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-genbi-blue transition">Front Liners</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Garda terdepan dalam mengkomunikasikan kebijakan Bank Indonesia kepada sesama mahasiswa dan masyarakat umum di Riau.
                     </p>
                 </div>
-                <!-- Card 2 -->
-                <div class="p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
-                    <div class="w-16 h-16 bg-red-100 text-genbi-red rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-red group-hover:text-white transition">
+                <div class="reveal-element delay-200 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+                    <div class="w-16 h-16 bg-red-100 text-genbi-red rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-red group-hover:text-white transition duration-300 transform group-hover:rotate-6">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Change Agents</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-genbi-red transition">Change Agents</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Agen perubahan yang menjadi teladan, inovator, dan inisiator perubahan positif di lingkungan kampus dan masyarakat.
                     </p>
                 </div>
-                <!-- Card 3 -->
-                <div class="p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
-                    <div class="w-16 h-16 bg-blue-100 text-genbi-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-blue group-hover:text-white transition">
+                <div class="reveal-element delay-300 p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 text-genbi-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-genbi-blue group-hover:text-white transition duration-300 transform group-hover:rotate-6">
                         <i class="fas fa-user-graduate"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Future Leaders</h3>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-genbi-blue transition">Future Leaders</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Calon pemimpin masa depan yang memiliki kompetensi, integritas tinggi, dan kepedulian sosial yang kuat.
                     </p>
@@ -317,28 +305,25 @@
         </div>
     </section>
 
-    <!-- DIVISI -->
- <!-- DIVISI (UPDATED WITH BUTTONS) -->
     <section id="divisi" class="py-24 bg-gray-900 text-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-genbi-blue blur-3xl"></div>
-            <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-genbi-red blur-3xl"></div>
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-genbi-blue blur-3xl animate-pulse"></div>
+            <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-genbi-red blur-3xl animate-pulse"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="mb-12 text-center md:text-left">
+            <div class="mb-12 text-center md:text-left reveal-element">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-3">Divisi Organisasi</h2>
                 <p class="text-gray-400 text-lg">Struktur kerja yang solid untuk hasil yang maksimal.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Divisi 1: Pendidikan & Kebudayaan -->
-                <div class="group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition border-l-4 border-genbi-blue relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125">
+                <div class="reveal-element delay-100 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-genbi-blue relative overflow-hidden flex flex-col hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
                          <i class="fas fa-book-open text-6xl text-white"></i>
                     </div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-blue shadow-lg"><i class="fas fa-book-open"></i></div>
+                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-blue shadow-lg group-hover:bg-genbi-blue group-hover:text-white transition"><i class="fas fa-book-open"></i></div>
                         <h3 class="text-xl font-bold">Pendidikan & Kebudayaan</h3>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Fokus pada peningkatan literasi, edukasi kebanksentralan, serta pelestarian seni dan budaya.</p>
@@ -349,13 +334,12 @@
                     </div>
                 </div>
 
-                <!-- Divisi 2: Kewirausahaan -->
-                <div class="group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition border-l-4 border-yellow-500 relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125">
+                <div class="reveal-element delay-200 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-yellow-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
                          <i class="fas fa-hand-holding-usd text-6xl text-white"></i>
                     </div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-yellow-500 shadow-lg"><i class="fas fa-hand-holding-usd"></i></div>
+                        <div class="p-3 bg-gray-900 rounded-lg text-yellow-500 shadow-lg group-hover:bg-yellow-500 group-hover:text-white transition"><i class="fas fa-hand-holding-usd"></i></div>
                         <h3 class="text-xl font-bold">Kewirausahaan</h3>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Mengembangkan jiwa entrepreneurship anggota melalui bazaar, bisnis, dan pelatihan ekonomi kreatif.</p>
@@ -366,13 +350,12 @@
                     </div>
                 </div>
 
-                <!-- Divisi 3: Pengabdian Masyarakat -->
-                <div class="group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition border-l-4 border-genbi-red relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125">
+                <div class="reveal-element delay-300 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-genbi-red relative overflow-hidden flex flex-col hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
                          <i class="fas fa-hands-helping text-6xl text-white"></i>
                     </div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-red shadow-lg"><i class="fas fa-hands-helping"></i></div>
+                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-red shadow-lg group-hover:bg-genbi-red group-hover:text-white transition"><i class="fas fa-hands-helping"></i></div>
                         <h3 class="text-xl font-bold">Pengabdian Masyarakat</h3>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Bergerak dalam aksi sosial kemasyarakatan, bantuan bencana, dan pemberdayaan warga sekitar.</p>
@@ -383,13 +366,12 @@
                     </div>
                 </div>
 
-                <!-- Divisi 4: Lingkungan Hidup -->
-                 <div class="group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition border-l-4 border-green-500 relative overflow-hidden flex flex-col">
-                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125">
+                <div class="reveal-element delay-400 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-green-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
+                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
                          <i class="fas fa-leaf text-6xl text-white"></i>
                     </div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-green-500 shadow-lg"><i class="fas fa-leaf"></i></div>
+                        <div class="p-3 bg-gray-900 rounded-lg text-green-500 shadow-lg group-hover:bg-green-500 group-hover:text-white transition"><i class="fas fa-leaf"></i></div>
                         <h3 class="text-xl font-bold">Lingkungan Hidup</h3>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Aksi nyata pelestarian alam, penanaman pohon, dan kampanye gaya hidup ramah lingkungan.</p>
@@ -400,13 +382,12 @@
                     </div>
                 </div>
 
-                <!-- Divisi 5: Publikasi dan Sosialisasi -->
-                 <div class="group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition border-l-4 border-purple-500 relative overflow-hidden flex flex-col">
-                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125">
+                <div class="reveal-element delay-500 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-purple-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
+                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
                          <i class="fas fa-bullhorn text-6xl text-white"></i>
                     </div>
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-purple-500 shadow-lg"><i class="fas fa-bullhorn"></i></div>
+                        <div class="p-3 bg-gray-900 rounded-lg text-purple-500 shadow-lg group-hover:bg-purple-500 group-hover:text-white transition"><i class="fas fa-bullhorn"></i></div>
                         <h3 class="text-xl font-bold">Publikasi & Sosialisasi</h3>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Ujung tombak branding, manajemen media sosial, dan publikasi kegiatan organisasi secara luas.</p>
@@ -420,61 +401,57 @@
         </div>
     </section>
 
-    <!-- KEGIATAN -->
     <section id="kegiatan" class="py-24 bg-blue-50/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal-element">
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">Aksi Nyata Kami</h2>
                 <p class="mt-4 text-gray-600 text-lg">Jejak langkah kontribusi GenBI UIN Suska Riau.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Blog 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full">
+                <div class="reveal-element delay-100 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 1" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-genbi-red backdrop-blur-sm">PENDIDIKAN</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-genbi-blue transition">GenBI Mengajar di Desa Binaan</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">GenBI Mengajar di Desa Binaan</h3>
                         <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
                             Memberikan edukasi literasi keuangan dan motivasi belajar kepada anak-anak di daerah pinggiran Pekanbaru untuk masa depan yang lebih cerah.
                         </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto">
+                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
                             Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Blog 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full">
+                <div class="reveal-element delay-200 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 2" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-genbi-blue backdrop-blur-sm">SOSIALISASI</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-genbi-blue transition">QRIS Goes to Campus</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">QRIS Goes to Campus</h3>
                         <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
                             Mengenalkan sistem pembayaran digital QRIS kepada mahasiswa dan UMKM di kantin lingkungan UIN Suska Riau agar lebih modern.
                         </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto">
+                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
                             Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Blog 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full">
+                <div class="reveal-element delay-300 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 3" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-green-600 backdrop-blur-sm">LINGKUNGAN</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-genbi-blue transition">GenBI Hijaukan Kampus</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">GenBI Hijaukan Kampus</h3>
                         <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
                             Gerakan pungut sampah massal dan penanaman 100 bibit pohon produktif di area Fakultas UIN Suska Riau.
                         </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto">
+                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
                             Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -483,15 +460,12 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800">
+    <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800 reveal-element">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid md:grid-cols-4 gap-12 md:gap-8">
-                <!-- Brand -->
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-3 mb-6">
-                         <!-- Logo Footer -->
-                        <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center p-1">
+                         <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center p-1 hover:rotate-12 transition duration-300">
                              <img src="asset/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
                         </div>
                         <div>
@@ -503,31 +477,29 @@
                         "Energi untuk Negeri". Komunitas penerima beasiswa Bank Indonesia yang berdedikasi tinggi untuk kemajuan pendidikan dan sosial di Provinsi Riau.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- Links -->
                 <div>
                     <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="#beranda" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Beranda</a></li>
-                        <li><a href="#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Sambutan</a></li>
-                        <li><a href="#tentang" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Tentang Kami</a></li>
-                        <li><a href="#divisi" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Struktur Organisasi</a></li>
-                        <li><a href="#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Berita & Galeri</a></li>
+                        <li><a href="#beranda" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Beranda</a></li>
+                        <li><a href="#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Sambutan</a></li>
+                        <li><a href="#tentang" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Tentang Kami</a></li>
+                        <li><a href="#divisi" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Struktur Organisasi</a></li>
+                        <li><a href="#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Berita & Galeri</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div>
                     <h4 class="text-white font-bold text-lg mb-6">Hubungi Kami</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt mt-1 text-genbi-red"></i>
+                            <i class="fas fa-map-marker-alt mt-1 text-genbi-red animate-bounce"></i>
                             <span>UIN Sultan Syarif Kasim Riau,<br>Jl. HR. Soebrantas No. 155, Pekanbaru, Riau.</span>
                         </li>
                         <li class="flex items-center gap-3">
@@ -545,12 +517,11 @@
         <div class="bg-black py-6 border-t border-gray-800">
             <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                 <p>&copy; 2024 GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
-                <p>Designed with <i class="fas fa-heart text-red-500 mx-1"></i> for Indonesia</p>
+                <p>Designed with <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> for Indonesia</p>
             </div>
         </div>
     </footer>
 
-    <!-- Script for Mobile Menu -->
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -564,6 +535,27 @@
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
+        });
+
+        // Script Animasi Scroll (Intersection Observer)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-element');
+            revealElements.forEach(el => observer.observe(el));
         });
     </script>
 
