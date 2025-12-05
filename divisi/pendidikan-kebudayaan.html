@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GenBI Komisariat UIN Suska Riau - Energi untuk Negeri</title>
+
+    <!-- Deskripsi SEO -->
+    <meta name="description" 
+          content="Website resmi GenBI Komisariat UIN Suska Riau. Informasi kegiatan, divisi, galeri, dan program beasiswa Bank Indonesia untuk generasi muda. Energi untuk Negeri.">
+
+    <!-- Keyword SEO -->
+    <meta name="keywords" 
+          content="GenBI UIN Suska Riau, GenBI Riau, GenBI Komisariat, Beasiswa Bank Indonesia, GenBI Komsat UIN Suska, Energi untuk Negeri, Organisasi GenBI Riau">
+
+    <!-- Canonical (supaya Google anggap URL asli utamanya) -->
+    <link rel="canonical" href="https://genbi-uinsuska.vercel.app">
+
+    <!-- Open Graph untuk WA, Facebook, Line -->
+    <meta property="og:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta property="og:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri dengan karya, kontribusi, dan gerakan nyata.">
+    <meta property="og:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+    <meta property="og:url" content="https://genbi-uinsuska.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GenBI UIN Suska Riau">
+
+    <!-- Twitter Cards (boleh tanpa akun) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
+    <meta name="twitter:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
+    <meta name="twitter:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
+
+    <!-- Schema.org JSON-LD untuk SEO Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GenBI Komisariat UIN Suska Riau",
+      "url": "https://genbi-uinsuska.vercel.app",
+      "logo": "https://genbi-uinsuska.vercel.app/asset/img/Logo.png",
+      "sameAs": [
+        "https://www.instagram.com/genbi_uinsuska",
+        "https://www.youtube.com"
+      ],
+      "description": "Website profil resmi GenBI Komisariat UIN Suska Riau. Organisasi penerima beasiswa Bank Indonesia dengan semangat Energi untuk Negeri."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../asset/img/favicon.png" type="image/png">
+
+    <!-- Fonts & CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind Custom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        genbi: {
+                            blue: '#0044cc',
+                            dark: '#002a80',
+                            red: '#ff0000',
+                            redhover: '#cc0000'
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Animasi -->
+    <style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-700 bg-gray-50">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div class="h-12 w-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                        <img src="../asset/img/Logo.png" alt="Logo GenBI" class="w-full h-full object-contain">
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-genbi-blue leading-none">GenBI</h1>
+                        <p class="text-[10px] font-bold text-genbi-red tracking-widest uppercase mt-0.5">Komsat UIN Suska Riau</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../index.html#beranda" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
+                    <a href="../index.html#sambutan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Sambutan</a>
+                    <a href="../index.html#tentang" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Tentang Kami</a>
+                    <a href="../index.html#divisi" class="text-genbi-blue font-bold transition text-sm lg:text-base">Divisi</a>
+                    <a href="../index.html#kegiatan" class="text-gray-600 hover:text-genbi-blue font-medium transition text-sm lg:text-base relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-genbi-blue after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full">Kegiatan</a>
+                    <a href="../index.html#kontak" class="px-5 py-2.5 bg-genbi-red text-white rounded-full font-medium hover:bg-genbi-redhover transition shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transform hover:-translate-y-0.5 text-sm lg:text-base">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-genbi-blue focus:outline-none p-2 transition-transform active:scale-95">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg transform origin-top transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="../index.html#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="../index.html#sambutan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Sambutan</a>
+                <a href="../index.html#tentang" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Tentang Kami</a>
+                <a href="../index.html#divisi" class="block px-3 py-2 text-base font-medium text-genbi-blue font-bold bg-blue-50 rounded-md">Divisi</a>
+                <a href="../index.html#kegiatan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Kegiatan</a>
+                <a href="../index.html#kontak" class="block mt-4 text-center px-5 py-3 bg-genbi-red text-white rounded-lg font-medium hover:bg-genbi-redhover">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-genbi-blue pt-40 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 animate-[pulse_4s_infinite]"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-600 opacity-20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 text-white">
+            <span class="reveal-element inline-block py-1 px-3 rounded-full bg-white/20 text-white text-xs font-semibold mb-4 backdrop-blur-sm border border-white/30">
+                Struktur Organisasi
+            </span>
+            <h1 class="reveal-element delay-100 text-3xl lg:text-5xl font-bold mb-4">Divisi Pendidikan & Kebudayaan</h1>
+            <p class="reveal-element delay-200 text-blue-100 max-w-2xl mx-auto text-lg">
+              Fokus pada peningkatan literasi, edukasi kebanksentralan, serta pelestarian seni dan budaya..
+            </p>
+        </div>
+    </section>
+
+<section class="py-20 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="relative flex flex-col items-center">
+            
+            <div class="absolute top-24 bottom-20 w-0.5 bg-gray-200 -z-0 reveal-element delay-500"></div>
+
+            <div class="relative z-10 mb-16 text-center group reveal-element delay-300">
+                <div class="relative w-48 h-48 mx-auto mb-4 cursor-pointer">
+                    <div class="absolute inset-0 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-genbi-blue rounded-full opacity-10 group-hover:opacity-20 transition duration-300 transform scale-110 animate-pulse"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Ketua Divisi" 
+                         class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl group-hover:scale-105 transition duration-500 relative z-10">
+                    
+                    <div class="absolute -bottom-2 -right-2 bg-genbi-blue text-white p-3 rounded-full shadow-lg z-20 animate-bounce">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 group-hover:text-genbi-blue transition-colors">Dani Harmade</h3>
+                <p class="text-genbi-red font-medium text-sm uppercase tracking-wider">Ketua Divisi</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 md:gap-40 mb-20 w-full max-w-4xl relative z-10">
+                <div class="absolute top-20 left-[20%] right-[20%] h-0.5 bg-gray-200 -z-10 hidden md:block reveal-element"></div>
+
+                <div class="text-center group reveal-element delay-400">
+                    <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Sekretaris" 
+                             class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Muthia Dwi Andhini</h3>
+                    <p class="text-genbi-blue font-medium text-xs md:text-sm uppercase tracking-wider">Sekretaris Divisi</p>
+                </div>
+
+                <div class="text-center group reveal-element delay-500">
+                    <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-400 to-teal-400 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Bendahara" 
+                             class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg group-hover:scale-110 group-hover:-rotate-3 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Amelia Rahmawati</h3>
+                    <p class="text-genbi-blue font-medium text-xs md:text-sm uppercase tracking-wider">Bendahara Divisi</p>
+                </div>
+            </div>
+
+            <div class="relative w-full text-center mb-12 reveal-element z-10">
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div class="w-full border-t border-gray-200"></div>
+                </div>
+                <div class="relative flex justify-center">
+                    <span class="px-6 py-2 bg-blue-50 text-genbi-blue text-sm font-bold rounded-full border border-blue-100 uppercase tracking-widest shadow-sm">
+                        Anggota
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl relative z-10">
+                
+                <div class="reveal-element delay-100 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-genbi-blue transition-colors">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Anggota" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue text-sm md:text-base">Neneng Try Handika</h4>
+                    <p class="text-xs text-gray-500 mt-1">Anggota</p>
+                </div>
+
+                <div class="reveal-element delay-200 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-genbi-blue transition-colors">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Anggota" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue text-sm md:text-base">Raihan Ibnu Wibowo</h4>
+                    <p class="text-xs text-gray-500 mt-1">Anggota</p>
+                </div>
+
+                <div class="reveal-element delay-300 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-genbi-blue transition-colors">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Anggota" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue text-sm md:text-base">Wahyu Retno Anisa Putri</h4>
+                    <p class="text-xs text-gray-500 mt-1">Anggota</p>
+                </div>
+
+                <div class="reveal-element delay-400 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-genbi-blue transition-colors">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Anggota" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-gray-900 group-hover:text-genbi-blue text-sm md:text-base">Annisa Yumna Tsabita</h4>
+                    <p class="text-xs text-gray-500 mt-1">Anggota</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800 reveal-element">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12 md:gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                         <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center p-1 hover:rotate-12 transition duration-300">
+                             <img src="asset/img/Logo.png" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                             <span class="text-xl font-bold text-white block">GenBI UIN Suska</span>
+                             <span class="text-xs text-gray-400">Komisariat UIN Suska Riau</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+                        "Energi untuk Negeri". Komunitas penerima beasiswa Bank Indonesia yang berdedikasi tinggi untuk kemajuan pendidikan dan sosial di Provinsi Riau.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/genbi_uinsuska/" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@genbiriau-generasibaruindo3216" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/Genbiriau_" class="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition duration-300 hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="../index.html#beranda" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Beranda</a></li>
+                        <li><a href="../index.html#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Sambutan</a></li>
+                        <li><a href="../index.html#tentang" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Tentang Kami</a></li>
+                        <li><a href="../index.html#divisi" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Struktur Organisasi</a></li>
+                        <li><a href="../index.html#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Berita & Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-genbi-red animate-bounce"></i>
+                            <span>UIN Sultan Syarif Kasim Riau,<br>Jl. HR. Soebrantas No. 155, Pekanbaru, Riau.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-genbi-red"></i>
+                            <span class="hover:text-white cursor-pointer transition">uinsuskagenbi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<div class="bg-black py-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
+
+        <p class="flex items-center gap-1">
+            Designed with 
+            <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> 
+            for Indonesia • by 
+            <a href="https://www.linkedin.com/in/daniharmade/" 
+               target="_blank" 
+               class="text-blue-400 hover:underline">
+               Dani Harmade
+            </a>
+        </p>
+    </div>
+</div>
+    </footer>
+
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        // Toggle Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Script Animasi Scroll (Intersection Observer)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Animasi memicu ketika 10% elemen terlihat
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Hanya animasi sekali
+                    }
+                });
+            }, observerOptions);
+
+            // Targetkan semua elemen dengan class 'reveal-element'
+            const revealElements = document.querySelectorAll('.reveal-element');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
