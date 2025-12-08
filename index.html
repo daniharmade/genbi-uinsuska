@@ -14,10 +14,10 @@
     <meta name="keywords" 
           content="GenBI UIN Suska Riau, GenBI Riau, GenBI Komisariat, Beasiswa Bank Indonesia, GenBI Komsat UIN Suska, Energi untuk Negeri, Organisasi GenBI Riau">
 
-    <!-- Canonical (supaya Google anggap URL asli utamanya) -->
+    <!-- Canonical -->
     <link rel="canonical" href="https://genbi-uinsuska.vercel.app">
 
-    <!-- Open Graph untuk WA, Facebook, Line -->
+    <!-- Open Graph -->
     <meta property="og:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
     <meta property="og:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri dengan karya, kontribusi, dan gerakan nyata.">
     <meta property="og:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
@@ -25,13 +25,13 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GenBI UIN Suska Riau">
 
-    <!-- Twitter Cards (boleh tanpa akun) -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GenBI Komisariat UIN Suska Riau - Energi untuk Negeri">
     <meta name="twitter:description" content="Website resmi GenBI Komisariat UIN Suska Riau. Energi untuk Negeri.">
     <meta name="twitter:image" content="https://genbi-uinsuska.vercel.app/asset/img/preview.png">
 
-    <!-- Schema.org JSON-LD untuk SEO Google -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -97,6 +97,7 @@
 
 <body class="font-sans antialiased text-gray-700 bg-gray-50">
 
+    <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -129,7 +130,8 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg transform origin-top transition-all duration-300">
+        <!-- Mobile Menu Animated -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg transform origin-top transition-all duration-300 ease-in-out scale-y-0 opacity-0 pointer-events-none">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Beranda</a>
                 <a href="#sambutan" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-genbi-blue hover:bg-gray-50 rounded-md">Sambutan</a>
@@ -143,7 +145,8 @@
         </div>
     </nav>
 
-<section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-[90vh] lg:min-h-screen flex items-center pt-20 pb-24 lg:pb-0 overflow-hidden bg-white">
         
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
         <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-red-50/60 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
@@ -213,6 +216,7 @@
         </div>
     </section>
 
+    <!-- Stats Section -->
     <section class="bg-genbi-blue py-12 relative z-10 -mt-2 reveal-element">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white divide-x divide-blue-400/30">
@@ -236,6 +240,7 @@
         </div>
     </section>
 
+    <!-- Sambutan Section -->
     <section id="sambutan" class="py-20 bg-white overflow-hidden relative">
         <div class="absolute top-20 right-0 p-4 opacity-10">
             <div class="w-24 h-24 border-t-4 border-r-4 border-genbi-blue rounded-tr-3xl"></div>
@@ -298,6 +303,7 @@
         </div>
     </section>
 
+    <!-- Tentang Section -->
     <section id="tentang" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal-element">
@@ -341,102 +347,7 @@
         </div>
     </section>
 
-    <!-- <section id="divisi" class="py-24 bg-gray-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-genbi-blue blur-3xl animate-pulse"></div>
-            <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-genbi-red blur-3xl animate-pulse"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="mb-12 text-center md:text-left reveal-element">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-3">Divisi Organisasi</h2>
-                <p class="text-gray-400 text-lg">Struktur kerja yang solid untuk hasil yang maksimal.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="reveal-element delay-100 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-genbi-blue relative overflow-hidden flex flex-col hover:-translate-y-2">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
-                         <i class="fas fa-book-open text-6xl text-white"></i>
-                    </div>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-blue shadow-lg group-hover:bg-genbi-blue group-hover:text-white transition"><i class="fas fa-book-open"></i></div>
-                        <h3 class="text-xl font-bold">Pendidikan & Kebudayaan</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Fokus pada peningkatan literasi, edukasi kebanksentralan, serta pelestarian seni dan budaya.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-700/50">
-                        <a href="divisi/pendidikan-kebudayaan.html" class="inline-flex items-center text-blue-400 font-semibold text-sm hover:text-white transition group-hover:translate-x-1">
-                            Lihat Divisi <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-element delay-200 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-yellow-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
-                         <i class="fas fa-hand-holding-usd text-6xl text-white"></i>
-                    </div>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-yellow-500 shadow-lg group-hover:bg-yellow-500 group-hover:text-white transition"><i class="fas fa-hand-holding-usd"></i></div>
-                        <h3 class="text-xl font-bold">Kewirausahaan</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Mengembangkan jiwa entrepreneurship anggota melalui bazaar, bisnis, dan pelatihan ekonomi kreatif.</p>
-                     <div class="mt-auto pt-4 border-t border-gray-700/50">
-                        <a href="divisi/kewirausahaan.html" class="inline-flex items-center text-yellow-400 font-semibold text-sm hover:text-white transition group-hover:translate-x-1">
-                            Lihat Divisi <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-element delay-300 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-genbi-red relative overflow-hidden flex flex-col hover:-translate-y-2">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
-                         <i class="fas fa-hands-helping text-6xl text-white"></i>
-                    </div>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-genbi-red shadow-lg group-hover:bg-genbi-red group-hover:text-white transition"><i class="fas fa-hands-helping"></i></div>
-                        <h3 class="text-xl font-bold">Pengabdian Masyarakat</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Bergerak dalam aksi sosial kemasyarakatan, bantuan bencana, dan pemberdayaan warga sekitar.</p>
-                     <div class="mt-auto pt-4 border-t border-gray-700/50">
-                        <a href="divisi/pengabdian-masyarakat.html" class="inline-flex items-center text-red-400 font-semibold text-sm hover:text-white transition group-hover:translate-x-1">
-                            Lihat Divisi <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-element delay-400 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-green-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
-                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
-                         <i class="fas fa-leaf text-6xl text-white"></i>
-                    </div>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-green-500 shadow-lg group-hover:bg-green-500 group-hover:text-white transition"><i class="fas fa-leaf"></i></div>
-                        <h3 class="text-xl font-bold">Lingkungan Hidup</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Aksi nyata pelestarian alam, penanaman pohon, dan kampanye gaya hidup ramah lingkungan.</p>
-                     <div class="mt-auto pt-4 border-t border-gray-700/50">
-                        <a href="divisi/lingkungan-hidup.html" class="inline-flex items-center text-green-400 font-semibold text-sm hover:text-white transition group-hover:translate-x-1">
-                            Lihat Divisi <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-element delay-500 group bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition duration-300 border-l-4 border-purple-500 relative overflow-hidden flex flex-col hover:-translate-y-2">
-                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition transform group-hover:scale-125 duration-500">
-                         <i class="fas fa-bullhorn text-6xl text-white"></i>
-                    </div>
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 bg-gray-900 rounded-lg text-purple-500 shadow-lg group-hover:bg-purple-500 group-hover:text-white transition"><i class="fas fa-bullhorn"></i></div>
-                        <h3 class="text-xl font-bold">Publikasi & Sosialisasi</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Ujung tombak branding, manajemen media sosial, dan publikasi kegiatan organisasi secara luas.</p>
-                     <div class="mt-auto pt-4 border-t border-gray-700/50">
-                        <a href="divisi/publikasi-sosialisasi.html" class="inline-flex items-center text-purple-400 font-semibold text-sm hover:text-white transition group-hover:translate-x-1">
-                            Lihat Divisi <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
+    <!-- Divisi Section -->
     <section id="divisi" class="py-24 bg-gray-900 text-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-genbi-blue blur-3xl animate-pulse"></div>
@@ -551,65 +462,97 @@
         </div>
     </section>
 
+    <!-- Galeri Kegiatan (UPDATED) -->
     <section id="kegiatan" class="py-24 bg-blue-50/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal-element">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">Aksi Nyata Kami</h2>
-                <p class="mt-4 text-gray-600 text-lg">Jejak langkah kontribusi GenBI UIN Suska Riau.</p>
+                <span class="text-genbi-red font-bold tracking-wider text-sm uppercase">Dokumentasi</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2">Galeri Kegiatan</h2>
+                <div class="h-1.5 w-24 bg-genbi-blue mx-auto rounded-full mt-4"></div>
+                <p class="mt-4 text-gray-600 text-lg">Momen kebersamaan dan aksi nyata GenBI UIN Suska Riau.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="reveal-element delay-100 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-genbi-red backdrop-blur-sm">PENDIDIKAN</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">GenBI Mengajar di Desa Binaan</h3>
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
-                            Memberikan edukasi literasi keuangan dan motivasi belajar kepada anak-anak di daerah pinggiran Pekanbaru untuk masa depan yang lebih cerah.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
-                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+            <!-- Grid Galeri Foto -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <!-- Foto 1 -->
+                <div class="reveal-element delay-100 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="GenBI Mengajar" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">GenBI Mengajar</h3>
                     </div>
                 </div>
 
-                <div class="reveal-element delay-200 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-genbi-blue backdrop-blur-sm">SOSIALISASI</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">QRIS Goes to Campus</h3>
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
-                            Mengenalkan sistem pembayaran digital QRIS kepada mahasiswa dan UMKM di kantin lingkungan UIN Suska Riau agar lebih modern.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
-                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+                <!-- Foto 2 -->
+                <div class="reveal-element delay-200 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Sosialisasi QRIS" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">QRIS Goes to Campus</h3>
                     </div>
                 </div>
 
-                <div class="reveal-element delay-300 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-300 flex flex-col h-full hover:-translate-y-2 group">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-green-600 backdrop-blur-sm">LINGKUNGAN</div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-genbi-blue transition">GenBI Hijaukan Kampus</h3>
-                        <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
-                            Gerakan pungut sampah massal dan penanaman 100 bibit pohon produktif di area Fakultas UIN Suska Riau.
-                        </p>
-                        <a href="#" class="inline-flex items-center text-genbi-blue font-semibold text-sm hover:underline mt-auto group-hover:translate-x-1 transition">
-                            Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+                <!-- Foto 3 -->
+                <div class="reveal-element delay-300 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="GenBI Hijau" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">Penanaman Pohon</h3>
                     </div>
                 </div>
+
+                <!-- Foto 4 -->
+                <div class="reveal-element delay-400 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Rapat Kerja" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">Rapat Kerja Tahunan</h3>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="reveal-element delay-500 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Bakti Sosial" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">GenBI Berbagi</h3>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="reveal-element delay-600 relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group h-72">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Festival Budaya" 
+                         class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90 transition duration-300"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold leading-tight">Festival Seni Riau</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.instagram.com/genbi_uinsuska" class="inline-flex items-center px-6 py-3 border border-genbi-blue text-genbi-blue font-semibold rounded-full hover:bg-genbi-blue hover:text-white transition duration-300">
+                    Lihat Lebih Banyak di Instagram
+                    <i class="fab fa-instagram ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer id="kontak" class="bg-gray-900 text-gray-300 border-t border-gray-800 reveal-element">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid md:grid-cols-4 gap-12 md:gap-8">
@@ -636,11 +579,11 @@
                 <div>
                     <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="../index.html#beranda" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Beranda</a></li>
-                        <li><a href="../index.html#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Sambutan</a></li>
-                        <li><a href="../index.html#tentang" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Tentang Kami</a></li>
-                        <li><a href="../index.html#divisi" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Struktur Organisasi</a></li>
-                        <li><a href="../index.html#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Berita & Galeri</a></li>
+                        <li><a href="#beranda" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Beranda</a></li>
+                        <li><a href="#sambutan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Sambutan</a></li>
+                        <li><a href="#tentang" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Tentang Kami</a></li>
+                        <li><a href="#divisi" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Struktur Organisasi</a></li>
+                        <li><a href="#kegiatan" class="hover:text-genbi-blue transition flex items-center gap-2 group"><i class="fas fa-chevron-right text-xs transform group-hover:translate-x-1 transition"></i> Dokumentasi</a></li>
                     </ul>
                 </div>
 
@@ -659,37 +602,49 @@
                 </div>
             </div>
         </div>
-<div class="bg-black py-6 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-       <p>&copy; <span id="year"></span> GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
+        <div class="bg-black py-6 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+               <p>&copy; <span id="year"></span> GenBI Komisariat UIN Suska Riau. All rights reserved.</p>
 
-        <p class="flex items-center gap-1">
-            Designed with 
-            <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> 
-            for Indonesia • by 
-            <a href="https://www.linkedin.com/in/daniharmade/" 
-               target="_blank" 
-               class="text-blue-400 hover:underline">
-               Dani Harmade
-            </a>
-        </p>
-    </div>
-</div>
+                <p class="flex items-center gap-1">
+                    Designed with 
+                    <i class="fas fa-heart text-red-500 mx-1 animate-pulse"></i> 
+                    for Indonesia • by 
+                    <a href="https://www.linkedin.com/in/daniharmade/" 
+                       target="_blank" 
+                       class="text-blue-400 hover:underline">
+                       Dani Harmade
+                    </a>
+                </p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+        
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            // Animasi Toggle Menu
+            menu.classList.toggle('scale-y-0');
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('pointer-events-none');
+            
+            // State Terbuka
+            menu.classList.toggle('scale-y-100');
+            menu.classList.toggle('opacity-100');
+            menu.classList.toggle('pointer-events-auto');
         });
         
         // Menutup menu saat link diklik
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+                // Kembalikan ke state tertutup
+                menu.classList.add('scale-y-0', 'opacity-0', 'pointer-events-none');
+                menu.classList.remove('scale-y-100', 'opacity-100', 'pointer-events-auto');
             });
         });
 
